@@ -1,0 +1,14 @@
+{
+    "name": "aharen/maldives-islands",
+    "description": "Atolls & Islands of Maldives for PHP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ahmed Khusaam",
+            "email": "hello@khusaam.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
