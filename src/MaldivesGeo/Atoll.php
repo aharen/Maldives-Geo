@@ -32,7 +32,7 @@ class Atoll
             ->first();
     }
 
-    public function getWithIslands($code)
+    public function getWithIslands($code): ?array
     {
         $code = strtoupper($code);
         $out = $this->data
