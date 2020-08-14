@@ -12,10 +12,14 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "aharen\\MaldivesIslands\\": "src/MaldivesIslands"
+            "aharen\\MaldivesGeo\\": "src/MaldivesGeo"
         }
     },
     "require-dev": {
         "phpunit/phpunit": "^9.1"
+    },
+    "require": {
+        "php": "^7.4.0",
+        "tightenco/collect": "^7.11"
     }
 }
