@@ -1,6 +1,8 @@
 # Atolls & Islands of Maldives for PHP
 
-All data collected from [https://www.atollsofmaldives.gov.mv/atolls](www.atollsofmaldives.gov.mv). If you're looking for a sime JS or JSON version [https://github.com/naxeem/maldives-atoll-islands](naxeem/maldives-atoll-islands)
+All data collected from [https://www.atollsofmaldives.gov.mv/atolls](www.atollsofmaldives.gov.mv).
+
+If you're looking for a simple JS or JSON version [https://github.com/naxeem/maldives-atoll-islands](naxeem/maldives-atoll-islands)
 
 ## Installation
 
@@ -15,6 +17,7 @@ This package has 2 main classes, one for Atolls and the other for Islands
 ### Atolls
 
 Each atoll contains the following information:
+
 ```
 {
     "code": "HDH",
