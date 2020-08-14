@@ -3,7 +3,7 @@
 namespace aharen\MaldivesGeo;
 
 use aharen\MaldivesGeo\Atoll;
-use Tightenco\Collect\Support\Collection;
+use DusanKasan\Knapsack\Collection;
 
 class Island
 {
@@ -11,7 +11,7 @@ class Island
 
     public function __construct()
     {
-        $this->data = collect(
+        $this->data = new Collection(
             json_decode(
                 file_get_contents(__DIR__.'/data/islands.json'),
                 true
@@ -19,27 +19,26 @@ class Island
         );
     }
 
-    public function all(): array
+    public function all(): Collection
     {
-        return $this->data->toArray();
+        return $this->data->values();
     }
 
     public function get($name): ?array
     {
         return $this->data
-            ->where('name', ucwords(strtolower($name)))
-            ->values()
-            ->first();
+            ->find(function ($value, $key) use ($name) {
+                return $value['name'] === ucwords(strtolower($name));
+            });
     }
 
     public function getWithAtoll($name): ?array
     {
         $out = $this->data
-            ->where('name', ucwords(strtolower($name)))
-            ->values()
-            ->first();
+            ->find(function ($value, $key) use ($name) {
+                return $value['name'] === ucwords(strtolower($name));
+            });
 
-        
         if (null !== $out) {
             $out['atoll_detail'] = (new Atoll)->get($out['atoll']);
         }
@@ -50,13 +49,14 @@ class Island
     public function getInAtoll($code): ?array
     {
         $out = $this->data
-            ->where('atoll', strtoupper($code))
-            ->values();
+            ->filter(function ($value, $key) use ($code) {
+                return strtoupper($code) === $value['atoll'];
+            })->values()->toArray();
 
-        if ($out->count() > 0) {
-            return $out->toArray();
+        if (count($out) === 0) {
+            return null;
         }
 
-        return null;
+        return $out;
     }
 }

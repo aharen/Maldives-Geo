@@ -3,7 +3,7 @@
 namespace aharen\MaldivesGeo;
 
 use aharen\MaldivesGeo\Island;
-use Tightenco\Collect\Support\Collection;
+use DusanKasan\Knapsack\Collection;
 
 class Atoll
 {
@@ -11,7 +11,7 @@ class Atoll
 
     public function __construct()
     {
-        $this->data = collect(
+        $this->data = new Collection(
             json_decode(
                 file_get_contents(__DIR__.'/data/atolls.json'),
                 true
@@ -19,26 +19,30 @@ class Atoll
         );
     }
 
-    public function all(): array
+    public function all(): Collection
     {
-        return $this->data->toArray();
+        return $this->data->values();
     }
 
     public function get($code): ?array
     {
         return $this->data
-            ->where('code', strtoupper($code))
-            ->values()
-            ->first();
+            ->find(function ($value, $key) use ($code) {
+                return $value['code'] === strtoupper($code);
+            });
     }
 
     public function getWithIslands($code): ?array
     {
-        $code = strtoupper($code);
+        // var_dump((new Island)->getInAtoll($code));
+        // exit;
+        
         $out = $this->data
-            ->where('code', $code)
-            ->values()
-            ->first();
+            ->find(function ($value, $key) use ($code) {
+                return $value['code'] === strtoupper($code);
+            });
+
+            
         
         if (null !== $out) {
             $out['islands'] = (new Island)->getInAtoll($code);
