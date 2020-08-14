@@ -41,3 +41,45 @@ use aharen\MaldivesGeo\Atoll;
 
 (new Atoll)->get('gn');
 ```
+
+Get an atoll with the islands in atoll
+
+```
+use aharen\MaldivesGeo\Atoll;
+
+(new Atoll)->getWithIslands('gn');
+```
+
+### Islands
+
+Each island contains the following information:
+
+```
+{
+   "atoll": "HDH",
+    "type": "Islands",
+    "name": "Vaikaradhoo",
+    "alt_name": null,
+    "latitude": "6.549444444",
+    "longitude": "72.95305556",
+    "flags": [
+        "I"
+    ]
+}
+```
+
+Get an island by it's name
+
+```
+use aharen\MaldivesGeo\Island;
+
+(new Island)->get('vaikaradhoo');
+```
+
+Get all islands in an atoll
+
+```
+use aharen\MaldivesGeo\Island;
+
+(new Island)->getInAtoll('gn');
+```
