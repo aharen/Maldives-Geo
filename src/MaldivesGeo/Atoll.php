@@ -19,9 +19,9 @@ class Atoll
         );
     }
 
-    public function all(): Collection
+    public function all(): array
     {
-        return $this->data->values();
+        return $this->data->values()->toArray();
     }
 
     public function get($code): ?array
