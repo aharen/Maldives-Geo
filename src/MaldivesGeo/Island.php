@@ -2,6 +2,7 @@
 
 namespace aharen\MaldivesGeo;
 
+use aharen\MaldivesGeo\Atoll;
 use Tightenco\Collect\Support\Collection;
 
 class Island
@@ -29,6 +30,21 @@ class Island
             ->where('name', ucwords(strtolower($name)))
             ->values()
             ->first();
+    }
+
+    public function getWithAtoll($name): ?array
+    {
+        $out = $this->data
+            ->where('name', ucwords(strtolower($name)))
+            ->values()
+            ->first();
+
+        
+        if (null !== $out) {
+            $out['atoll_detail'] = (new Atoll)->get($out['atoll']);
+        }
+
+        return $out;
     }
 
     public function getInAtoll($code): ?array

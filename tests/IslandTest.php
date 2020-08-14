@@ -52,6 +52,51 @@ class IslandTest extends TestCase
         $this->assertNull($this->islands->get('developerdhoo'));
     }
 
+    public function test_get_island_with_atoll_lowercase()
+    {
+        $this->assertEquals([
+            "atoll" => "HDH",
+            "type" => "Islands",
+            "name" => "Vaikaradhoo",
+            "alt_name" => null,
+            "latitude" => "6.549444444",
+            "longitude" => "72.95305556",
+            "flags" => [
+                "I"
+            ],
+            "atoll_detail" => [
+                "code" => "HDH",
+                "name" => "Haa Dhaalu Atoll",
+                "alt_name" => "Thiladhunmathi Dhekunuburi"
+            ]
+        ], $this->islands->getWithAtoll('vaikaradhoo'));
+    }
+
+    public function test_get_island_with_atoll_uppercase()
+    {
+        $this->assertEquals([
+            "atoll" => "HDH",
+            "type" => "Islands",
+            "name" => "Vaikaradhoo",
+            "alt_name" => null,
+            "latitude" => "6.549444444",
+            "longitude" => "72.95305556",
+            "flags" => [
+                "I"
+            ],
+            "atoll_detail" => [
+                "code" => "HDH",
+                "name" => "Haa Dhaalu Atoll",
+                "alt_name" => "Thiladhunmathi Dhekunuburi"
+            ]
+        ], $this->islands->getWithAtoll('VAIKARADHOO'));
+    }
+
+    public function test_get_island_with_atoll_invalid()
+    {
+        $this->assertNull($this->islands->getWithAtoll('developerdhoo'));
+    }
+
     public function test_get_in_atoll_uppercase()
     {
         $this->assertEquals([

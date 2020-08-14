@@ -76,6 +76,14 @@ use aharen\MaldivesGeo\Island;
 (new Island)->get('vaikaradhoo');
 ```
 
+Get an island by it's name with atoll
+
+```
+use aharen\MaldivesGeo\Island;
+
+(new Island)->getWithAtoll('vaikaradhoo');
+```
+
 Get all islands in an atoll
 
 ```
