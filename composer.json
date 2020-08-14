@@ -20,6 +20,6 @@
     },
     "require": {
         "php": "^7.4.0",
-        "tightenco/collect": "^7.11"
+        "dusank/knapsack": "^10.0.0"
     }
 }
