@@ -2,6 +2,7 @@
 
 namespace aharen\MaldivesGeo;
 
+use aharen\MaldivesGeo\Island;
 use Tightenco\Collect\Support\Collection;
 
 class Atoll
@@ -27,6 +28,22 @@ class Atoll
     {
         return $this->data
             ->where('code', strtoupper($code))
+            ->values()
             ->first();
+    }
+
+    public function getWithIslands($code)
+    {
+        $code = strtoupper($code);
+        $out = $this->data
+            ->where('code', $code)
+            ->values()
+            ->first();
+        
+        if (null !== $out) {
+            $out['islands'] = (new Island)->getInAtoll($code);
+        }
+
+        return $out;
     }
 }
