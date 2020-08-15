@@ -68,12 +68,22 @@ Each island contains the following information:
 }
 ```
 
-Get an island by it's name
+Get an island by it's name. Optional atoll parameter can be provided as the second argument.
+
+Since multiple islands with the same name exist, if the atoll is not provided it will return the first result
 
 ```
 use aharen\MaldivesGeo\Island;
 
 (new Island)->get('vaikaradhoo');
+```
+
+Get an island by it's name and atoll
+
+```
+use aharen\MaldivesGeo\Island;
+
+(new Island)->get('maafushi', 'f);
 ```
 
 Get an island by it's name with atoll

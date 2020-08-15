@@ -24,11 +24,14 @@ class Island
         return $this->data->values()->toArray();
     }
 
-    public function get($name): ?array
+    public function get($name, $atoll = null): ?array
     {
         return $this->data
-            ->find(function ($value, $key) use ($name) {
-                return $value['name'] === ucwords(strtolower($name));
+            ->find(function ($value, $key) use ($name, $atoll) {
+                if (null === $atoll) {
+                    return $value['name'] === ucwords(strtolower($name));
+                }
+                return $value['name'] === ucwords(strtolower($name)) && $value['atoll'] === strtoupper($atoll);
             });
     }
 
