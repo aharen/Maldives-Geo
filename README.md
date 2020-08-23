@@ -1,8 +1,8 @@
 # Atolls & Islands of Maldives for PHP
 
-All data collected from [https://www.atollsofmaldives.gov.mv/atolls](www.atollsofmaldives.gov.mv).
+All data collected from [www.atollsofmaldives.gov.mv](https://www.atollsofmaldives.gov.mv/atolls).
 
-If you're looking for a simple JS or JSON version [https://github.com/naxeem/maldives-atoll-islands](naxeem/maldives-atoll-islands)
+If you're looking for a simple JS or JSON version [naxeem/maldives-atoll-islands](https://github.com/naxeem/maldives-atoll-islands)
 
 ## Installation
 
