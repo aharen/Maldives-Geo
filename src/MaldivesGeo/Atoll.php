@@ -39,8 +39,6 @@ class Atoll
                 return $value['code'] === strtoupper($code);
             });
 
-            
-        
         if (null !== $out) {
             $out['islands'] = (new Island)->getInAtoll($code);
         }
