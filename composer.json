@@ -19,7 +19,7 @@
         "phpunit/phpunit": "^9.1"
     },
     "require": {
-        "php": "^7.4.0",
+        "php": "^8.0",
         "dusank/knapsack": "^10.0.0"
     }
 }
