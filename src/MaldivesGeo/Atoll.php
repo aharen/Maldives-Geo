@@ -34,9 +34,6 @@ class Atoll
 
     public function getWithIslands($code): ?array
     {
-        // var_dump((new Island)->getInAtoll($code));
-        // exit;
-        
         $out = $this->data
             ->find(function ($value, $key) use ($code) {
                 return $value['code'] === strtoupper($code);
