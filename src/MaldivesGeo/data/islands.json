@@ -5348,11 +5348,13 @@
     {
         "atoll": "K",
         "type": "Islands",
-        "name": "",
-        "alt_name": "Male'I[H]",
+        "name": "Male'",
+        "alt_name": null,
         "latitude": "4.174166667",
         "longitude": "73.50972222",
-        "flags": []
+        "flags": [
+            "I"
+        ]
     },
     {
         "atoll": "K",
