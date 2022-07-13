@@ -1451,7 +1451,7 @@
     {
         "atoll": "N",
         "type": "Islands",
-        "name": "Bodufushi falhu)",
+        "name": "Bodufushi falhu",
         "alt_name": "Ehdhupparu",
         "latitude": "5.698611111",
         "longitude": "73.41138889",
@@ -1906,12 +1906,13 @@
     {
         "atoll": "N",
         "type": "Islands",
-        "name": "Maafaru H)",
+        "name": "Maafaru",
         "alt_name": "ADF,",
         "latitude": "5.833611111111111",
         "longitude": "73.48111111111112",
         "flags": [
-            "I"
+            "I",
+            "H"
         ]
     },
     {
@@ -2195,7 +2196,7 @@
     {
         "atoll": "N",
         "type": "Sand Bank",
-        "name": "Kudarah kudarah)",
+        "name": "Kudarah",
         "alt_name": "Felivaru",
         "latitude": "5.832777778",
         "longitude": "73.31388889",
@@ -4418,12 +4419,13 @@
     {
         "atoll": "LH",
         "type": "Islands",
-        "name": "Lhohi IND)",
+        "name": "Lhohi",
         "alt_name": null,
         "latitude": "5.321388889",
         "longitude": "73.47277778",
         "flags": [
-            "U"
+            "U",
+            "IND"
         ]
     },
     {
@@ -5058,12 +5060,13 @@
     {
         "atoll": "K",
         "type": "Islands",
-        "name": "Hulhule H)",
+        "name": "Hulhule",
         "alt_name": "AIE,",
         "latitude": "4.189166667",
         "longitude": "73.52916667",
         "flags": [
-            "U"
+            "U",
+            "H"
         ]
     },
     {
@@ -7769,12 +7772,13 @@
     {
         "atoll": "DH",
         "type": "Islands",
-        "name": "Kudahuvadhoo H)",
+        "name": "Kudahuvadhoo",
         "alt_name": "ADF,",
         "latitude": "2.671111111",
         "longitude": "72.89388889",
         "flags": [
-            "I"
+            "I",
+            "H"
         ]
     },
     {
@@ -8795,7 +8799,7 @@
     {
         "atoll": "L",
         "type": "Islands",
-        "name": "Boduhuraa falhuthere)",
+        "name": "Boduhuraa (Maavashu Falhuthere)",
         "alt_name": "Maavashu",
         "latitude": "1.800555556",
         "longitude": "73.29444444",
@@ -9091,7 +9095,7 @@
     {
         "atoll": "L",
         "type": "Islands",
-        "name": "Boduhuraa falhuthere)",
+        "name": "Boduhuraa (Fonadhoo Falhuthere)",
         "alt_name": "Fonadhoo",
         "latitude": "1.844166667",
         "longitude": "73.51555556",
@@ -9113,12 +9117,13 @@
     {
         "atoll": "L",
         "type": "Islands",
-        "name": "Kahdhoo H)",
+        "name": "Kahdhoo",
         "alt_name": "ADE,",
         "latitude": "1.859722222",
         "longitude": "73.52138889",
         "flags": [
-            "U"
+            "U",
+            "H"
         ]
     },
     {
@@ -10443,8 +10448,8 @@
     {
         "atoll": "GDH",
         "type": "Islands",
-        "name": "Bodehutta nadella)",
-        "alt_name": "near",
+        "name": "Bodehutta (Near Nadella)",
+        "alt_name": "Nadella",
         "latitude": "0.299166667",
         "longitude": "73.04027778",
         "flags": [
@@ -10520,7 +10525,7 @@
     {
         "atoll": "GDH",
         "type": "Islands",
-        "name": "Dhoonirehaa falhuthere)",
+        "name": "Dhoonirehaa (Farehu falhuthere)",
         "alt_name": "Farehu",
         "latitude": "0.1947222222222222",
         "longitude": "73.19444444444444",
@@ -10531,8 +10536,8 @@
     {
         "atoll": "GDH",
         "type": "Islands",
-        "name": "Dhoonirehaa Maavarulu)",
-        "alt_name": "near",
+        "name": "Dhoonirehaa (Near Maavarulu)",
+        "alt_name": "Maavarulu",
         "latitude": "0.3244444444444444",
         "longitude": "73.49388888888889",
         "flags": [
@@ -10776,12 +10781,13 @@
     {
         "atoll": "GDH",
         "type": "Islands",
-        "name": "Kaadehdhoo H)",
+        "name": "Kaadehdhoo",
         "alt_name": "ADH,",
         "latitude": "0.487222222",
         "longitude": "72.99361111",
         "flags": [
-            "U"
+            "U",
+            "H"
         ]
     },
     {
@@ -11152,7 +11158,7 @@
     {
         "atoll": "GDH",
         "type": "Islands",
-        "name": "Maarehaa falhuthere)",
+        "name": "Maarehaa (Farehu Falhuthere)",
         "alt_name": "Farehu",
         "latitude": "0.19083333333333333",
         "longitude": "73.20055555555555",
@@ -11285,7 +11291,7 @@
     {
         "atoll": "GDH",
         "type": "Islands",
-        "name": "Bodehutta falhu theere)",
+        "name": "Bodehutta (Maguhdhoo Falhuthere)",
         "alt_name": "Maguhdhoo",
         "latitude": "0.261111111",
         "longitude": "73.34444444",
@@ -11631,7 +11637,7 @@
     {
         "atoll": "GDH",
         "type": "Islands",
-        "name": "Maarehaa kairi)",
+        "name": "Maarehaa (Near Nadalla)",
         "alt_name": "Nadalla",
         "latitude": "0.29055555555555557",
         "longitude": "73.0461111111111",
@@ -11732,8 +11738,8 @@
     {
         "atoll": "GDH",
         "type": "Islands",
-        "name": "Dhoonirehaa Nadella)",
-        "alt_name": "near",
+        "name": "Dhoonirehaa (Near Nadella)",
+        "alt_name": "Nadella",
         "latitude": "0.2683333333333333",
         "longitude": "73.08388888888888",
         "flags": [
