@@ -3,7 +3,7 @@
 namespace aharen\MaldivesGeo;
 
 use aharen\MaldivesGeo\Island;
-use DusanKasan\Knapsack\Collection;
+use Illuminate\Support\Collection;
 
 class Atoll
 {
@@ -27,17 +27,18 @@ class Atoll
     public function get($code): ?array
     {
         return $this->data
-            ->find(function ($value, $key) use ($code) {
+            ->filter(function ($value, $key) use ($code) {
                 return $value['code'] === strtoupper($code);
-            });
+            })
+            ?->values()->toArray()[0] ?? null;
     }
 
     public function getWithIslands($code): ?array
     {
         $out = $this->data
-            ->find(function ($value, $key) use ($code) {
+            ->filter(function ($value, $key) use ($code) {
                 return $value['code'] === strtoupper($code);
-            });
+            })?->values()->toArray()[0] ?? null;
 
         if (null !== $out) {
             $out['islands'] = (new Island)->getInAtoll($code);
